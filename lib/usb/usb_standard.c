@@ -317,8 +317,8 @@ static int usb_standard_get_configuration(usbd_device *usbd_dev,
 			&usbd_dev->config[usbd_dev->current_config - 1];
 		(*buf)[0] = cfg->bConfigurationValue;
 	} else {
-		(*buf)[0] = 0; // In Addressed state zero must be returned
-    	}
+		(*buf)[0] = 0;
+	}
 
 	return 1;
 }
